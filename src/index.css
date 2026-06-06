@@ -1,0 +1,133 @@
+:root {
+  --anime-bg: #0a0612;
+  --anime-border: #2d2440;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background-color: var(--anime-bg);
+  color: #e2e8f0;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(168, 85, 247, 0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(139, 92, 246, 0.08), transparent);
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 2rem);
+  padding-block: 2rem;
+}
+
+.anime-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(45, 36, 64, 0.8);
+  background-color: rgba(26, 20, 40, 0.8);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.anime-card .card-header {
+  background: transparent;
+  border-color: rgba(45, 36, 64, 0.6);
+}
+
+.anime-card .card {
+  background-color: rgba(20, 16, 32, 0.5);
+  border-color: rgba(45, 36, 64, 0.6);
+}
+
+.anime-card-link {
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.anime-card-link:hover {
+  transform: translateY(-4px);
+  color: #fff;
+}
+
+.stars {
+  color: #fbbf24;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #a78bfa, #e879f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-page {
+  min-height: 60vh;
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: var(--anime-bg);
+  --bs-body-color: #e2e8f0;
+  --bs-border-color: var(--anime-border);
+  --bs-primary: #a855f7;
+  --bs-primary-rgb: 168, 85, 247;
+  --bs-secondary-color: #94a3b8;
+  --bs-tertiary-color: #64748b;
+  --bs-link-color: #c4b5fd;
+  --bs-link-hover-color: #ddd6fe;
+}
+
+[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .navbar,
+[data-bs-theme="dark"] .dropdown-menu {
+  --bs-card-bg: rgba(26, 20, 40, 0.85);
+  --bs-card-border-color: rgba(45, 36, 64, 0.8);
+  --bs-navbar-bg: rgba(20, 16, 32, 0.85);
+  --bs-dropdown-bg: #1a1428;
+  --bs-dropdown-border-color: var(--anime-border);
+}
+
+[data-bs-theme="dark"] .navbar {
+  backdrop-filter: blur(12px);
+}
+
+[data-bs-theme="dark"] .navbar .nav-link {
+  color: #cbd5e1;
+}
+
+[data-bs-theme="dark"] .navbar .nav-link.active {
+  color: #c4b5fd;
+  font-weight: 600;
+}
+
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+  background-color: rgba(20, 16, 32, 0.8);
+  border-color: var(--anime-border);
+  color: #e2e8f0;
+}
+
+[data-bs-theme="dark"] .form-control:focus,
+[data-bs-theme="dark"] .form-select:focus {
+  border-color: #a855f7;
+  box-shadow: 0 0 0 0.25rem rgba(168, 85, 247, 0.25);
+}
+
+[data-bs-theme="dark"] .btn-primary {
+  --bs-btn-bg: #9333ea;
+  --bs-btn-border-color: #9333ea;
+  --bs-btn-hover-bg: #7e22ce;
+  --bs-btn-hover-border-color: #7e22ce;
+}
+
+[data-bs-theme="dark"] .btn-outline-light {
+  --bs-btn-color: #cbd5e1;
+  --bs-btn-border-color: #475569;
+  --bs-btn-hover-bg: rgba(255, 255, 255, 0.08);
+  --bs-btn-hover-border-color: #64748b;
+}
